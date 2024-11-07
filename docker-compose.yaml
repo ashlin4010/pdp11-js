@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./:/static
+    ports:
+      - 8085:8085
